@@ -3,6 +3,7 @@ const express = require("express");
 const routes = require("./routes");
 const hbsConfig = require("./config/viewEngine");
 const middlewares = require("./middlewares");
+const ENV = require("./config/env");
 
 tailwindProcess();
 
@@ -12,6 +13,6 @@ middlewares(app);
 hbsConfig(app);
 routes(app);
 
-app.listen(3000, () => {
-  console.log("🚀 RUNNING ON http://localhost:3000");
+app.listen(ENV.PORT, () => {
+  console.log(`🚀 RUNNING ON http://localhost:${ENV.PORT}`);
 });
