@@ -1,0 +1,25 @@
+<form 
+    action="/encrypt" 
+    method="POST"
+    class="flex flex-col items-center justify-center w-full space-y-2"
+>
+  <label for="text">Text:</label>
+  {{> components/input text=text name="text" required=true autofocus=true}}
+  <label for="key">Key:</label>
+  {{> components/input text=encryptionKey name="encryptionKey"}}
+  {{> components/button text="Encrypt" type="submit"}}
+</form>
+{{#if encryptedText}}
+  <div
+    class="bg-teal-300 border-2 text-center border-green-700 rounded-md p-2 font-semibold mx-auto w-max"
+  >
+    <p>Encrypted Text:</p>
+    <p class="text-blue-800">{{encryptedText}}</p>
+  </div>
+{{/if}}
+
+{{#if error}}
+  <div>
+    <p>Error: {{error}}</p>
+  </div>
+{{/if}}

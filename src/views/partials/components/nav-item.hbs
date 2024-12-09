@@ -1,0 +1,11 @@
+<a 
+  href="{{href}}" 
+  class="font-bold p-2 
+    {{#if (eq context.path href)}}
+      bg-blue-900 text-white
+    {{else}}
+      text-black
+    {{/if}}
+    ">
+  {{text}}
+</a>

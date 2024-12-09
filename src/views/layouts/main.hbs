@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>Encryption Tool</title>
+    <link rel="stylesheet" href="/css/tailwind.css" />
+  </head>
+  <body class="bg-slate-400 h-screen w-screen">
+    <nav class="flex justify-center p-2">
+        {{> components/nav-item href="/encrypt" text="Encrypt"}}
+        {{> components/nav-item href="/decrypt" text="Decrypt"}}
+    </nav>
+    {{{body}}}
+  </body>
+</html>
