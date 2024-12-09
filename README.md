@@ -11,6 +11,8 @@ This is a web app that allows you to encrypt and decrypt text using a key.
 
 ## Installation
 
+Note: Before run project you need install tailwind css for compile tailwindcss styles
+
 1. Clone the repository
 2. Install dependencies
 3. Run the application using the following command:
